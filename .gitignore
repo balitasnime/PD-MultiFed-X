@@ -21,7 +21,6 @@ SCOPA-AUT.csv
 MDS-UPDRS_Part_I.csv
 MDS-UPDRS_Part_IV.csv
 UPDRS_PartII_PartIII.xlsx
-mri_features.csv
 mri_featuress.csv
 mri_features_seed42_for_fed_and_xai.csv
 all_test_predictions.csv
