@@ -1,0 +1,11 @@
+{
+  "added_files": [
+    "report_generation_rules.txt",
+    "td_pigd_definitions.txt",
+    "xai_guidelines.txt",
+    "clinical_scores_definitions.txt",
+    "mri_features_explanation.txt",
+    "combined_manual_guidelines.txt"
+  ],
+  "purpose": "Extra manual medical/report/XAI guidelines added to the Parkinson RAG FAISS knowledge base."
+}

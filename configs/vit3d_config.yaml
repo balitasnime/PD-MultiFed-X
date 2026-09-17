@@ -1,0 +1,21 @@
+# ViT3D configuration used for MRI representation extraction
+# (see notebooks/01_vit3d_extraction.ipynb)
+
+volume_size: [96, 96, 96]
+patch_size: [16, 16, 16]
+embedding_size: 128
+transformer_depth: 4
+attention_heads: 4
+output_dim: 256
+
+training:
+  batch_size: 1
+  learning_rate: 1.0e-4
+  weight_decay: 1.0e-4
+
+seeds: [42, 43, 44, 45, 46]
+
+horizons:
+  T2: [0, 12]
+  T4: [0, 12, 24, 36]
+  T6: [0, 12, 24, 36, 48, 60]

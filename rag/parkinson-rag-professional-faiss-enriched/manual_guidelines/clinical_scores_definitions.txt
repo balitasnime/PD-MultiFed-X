@@ -1,0 +1,22 @@
+CLINICAL SCORES USED IN PARKINSON DISEASE RESEARCH
+
+UPDRS / MDS-UPDRS:
+The Unified Parkinson's Disease Rating Scale and the Movement Disorder Society revision are used to assess motor and non-motor aspects of Parkinson's disease. They include sections related to non-motor experiences, daily living activities, motor examination, and motor complications.
+
+GDS:
+The Geriatric Depression Scale is used to assess depressive symptoms. In Parkinson-related prediction models, GDS-related variables can be important for depression detection and severity classification.
+
+MoCA:
+The Montreal Cognitive Assessment evaluates cognitive domains such as memory, attention, executive function, language, abstraction, and visuospatial ability. Lower cognitive performance may be relevant for progression analysis.
+
+ESS:
+The Epworth Sleepiness Scale assesses daytime sleepiness and may reflect sleep-related non-motor burden.
+
+RBDSQ:
+The REM Sleep Behavior Disorder Screening Questionnaire evaluates symptoms related to REM sleep behavior disorder, which is clinically relevant in Parkinson disease research.
+
+STAI:
+The State-Trait Anxiety Inventory evaluates anxiety symptoms. Anxiety is a common non-motor symptom in Parkinson disease.
+
+Interpretation rule:
+Clinical scales should be interpreted according to validated scoring procedures. In AI reports, they should be described as variables contributing to model prediction, not as standalone diagnostic conclusions.

@@ -1,0 +1,130 @@
+# ============================================================
+# PD-MultiFed-X — .gitignore
+# ============================================================
+
+# ---- PPMI / Clinical & Imaging Data (NEVER COMMIT) ----------
+# PPMI participant-level data must never be pushed to GitHub.
+# NOTE: no blanket "*.csv" rule here — the RAG knowledge-base CSVs under
+# rag/ are public reference data (PubMed/web sources), not patient data,
+# and are intentionally tracked. Only specific patient-derived CSVs are
+# ignored by name below.
+data/
+raw_data/
+mri_data/
+clinical_data/
+Demographics.csv
+Participant_Status.csv
+Geriatric_Depression_Scale.csv
+Epworth_Sleepiness_Scale.csv
+REM_Sleep_Behavior.csv
+SCOPA-AUT.csv
+MDS-UPDRS_Part_I.csv
+MDS-UPDRS_Part_IV.csv
+UPDRS_PartII_PartIII.xlsx
+mri_features.csv
+mri_featuress.csv
+mri_features_seed42_for_fed_and_xai.csv
+all_test_predictions.csv
+FINAL_METRICS_ALL_HORIZONS.csv
+FINAL_PER_CLASS_TABLE_T2_T4_T6.csv
+FINAL_PUBLICATION_TABLE_T2_T4_T6_SEEDS42_46.csv
+vit3d_test_metrics.csv
+
+# ---- MRI volumes / imaging formats (project uses DICOM via pydicom) ----
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+*.mgz
+*.img
+*.hdr
+dataimage/
+imagedataset/
+
+# ---- Kaggle / Colab working directories (found hardcoded in notebooks) ----
+kaggle/working/
+/content/
+drive/MyDrive/
+
+# ---- Trained models / checkpoints -----------------------------
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+vit3d_multitask_trained_seed42.pt
+vit3d_extractor_trained_seed42.pt
+global_model_all_in_one.pt
+global_model_complete.pt
+global_model_state_dict.pt
+
+# ---- Generated outputs / results (optional: keep summary CSVs if desired) ----
+vit3d_test_metrics.csv
+FINAL_METRICS_ALL_HORIZONS.csv
+FINAL_PER_CLASS_TABLE_T2_T4_T6.csv
+FINAL_PUBLICATION_TABLE_T2_T4_T6_SEEDS42_46.csv
+FINAL_ALL_HORIZONS_ALL_SEEDS_SUMMARY.json
+all_test_predictions.csv
+xai_patient_details.json
+INTERFACE_XAI_PATIENT_DETAILS*.json
+ALL_PATIENTS_ATTENTION_GRAD_ROLLOUT_summary*.csv
+ALL_PATIENTS_ATTENTION_GRAD_ROLLOUT_summary*.json
+
+# ---- Generated images (keep small illustrative ones in docs/ manually) ----
+mri.png
+xai_subtype.png
+xai_depression.png
+
+# ---- RAG resources (uncomment if these should NOT be public) ----
+# parkinson-rag-professional-faiss-enriched/
+
+# ---- Python ----------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# ---- Virtual environments ---------------------------------------
+venv/
+env/
+ENV/
+.venv/
+.conda/
+
+# ---- Jupyter -----------------------------------------------------
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# ---- OS / Editor junk ---------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ---- Logs / experiment tracking -----------------------------------
+logs/
+runs/
+wandb/
+mlruns/
+lightning_logs/
+*.log
+
+# ---- Environment / secrets -----------------------------------------
+.env
+.env.*
+*.key
+credentials.json
+
+# ---- Large misc files ------------------------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.7z

@@ -1,0 +1,10 @@
+MRI FEATURES EXPLANATION
+
+MRI-derived features in this project are latent biomarkers extracted by a deep learning imaging encoder, such as a 3D Vision Transformer. These features summarize patterns in MRI data that may help the multimodal model predict Parkinson subtype, depression status, or depression severity.
+
+Important rules:
+1. Latent MRI features are numerical representations learned by the model.
+2. A feature name such as mri_feat_199 or mri_feat_230 does not directly identify a brain region.
+3. MRI SHAP values indicate how much the model used that latent feature.
+4. MRI feature importance should be interpreted as model behavior, not as confirmed neuroanatomical evidence.
+5. Image-level attribution methods such as Integrated Gradients or Grad-CAM are needed to discuss spatial MRI regions.

@@ -1,0 +1,50 @@
+# ============================================================
+# PD-MultiFed-X — requirements.txt
+# Rebuilt from the ACTUAL imports found in the 8 project notebooks.
+# Run `pip freeze > requirements-lock.txt` in your working env to
+# pin exact versions used for your reported results.
+# ============================================================
+
+# ---- Core deep learning ----
+torch>=2.1.0
+torchvision>=0.16.0
+transformers>=4.40.0
+accelerate>=0.30.0
+bitsandbytes>=0.43.0        # used for loading Qwen2.5-VL in reduced precision
+
+# ---- Data handling ----
+numpy>=1.24.0
+pandas>=2.0.0
+openpyxl>=3.1.0             # reading UPDRS_PartII_PartIII.xlsx
+scikit-learn>=1.3.0
+scipy>=1.11.0
+
+# ---- Medical imaging (DICOM) ----
+pydicom>=2.4.0
+
+# ---- Hyperparameter tuning ----
+optuna>=3.6.0
+
+# ---- Explainable AI ----
+shap>=0.45.0
+captum>=0.7.0                # Integrated Gradients
+
+# ---- VLM report generation (Qwen2.5-VL-3B-Instruct) ----
+huggingface_hub>=0.23.0
+Pillow>=10.0.0
+
+# ---- Report-quality evaluation metrics (used in vlm_qwen.ipynb) ----
+bert-score>=0.3.13
+radgraph>=0.1.0              # clinical report factuality metric
+
+# ---- Visualization ----
+matplotlib>=3.8.0
+
+# ---- Notebook environment ----
+jupyter>=1.0.0
+ipykernel>=6.29.0
+ipywidgets>=8.1.0
+tqdm>=4.66.0
+
+# ---- Utilities ----
+python-dotenv>=1.0.0         # for loading HF_TOKEN etc. from a local .env file, never hardcoded

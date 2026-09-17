@@ -1,0 +1,10 @@
+TD AND PIGD MOTOR SUBTYPE DEFINITIONS
+
+Tremor Dominant (TD):
+TD means Tremor Dominant. It refers to a Parkinson motor phenotype in which tremor symptoms are more prominent than gait or postural instability symptoms. TD is often associated with relatively slower motor progression compared with PIGD, although individual patient trajectories may vary.
+
+Postural Instability and Gait Difficulty (PIGD):
+PIGD means Postural Instability and Gait Difficulty. It refers to a Parkinson motor phenotype characterized by gait impairment, balance problems, postural instability, freezing of gait, and increased fall risk. PIGD is frequently associated with greater disability, faster clinical progression, and possible cognitive involvement.
+
+Interpretation rule:
+TD/PIGD labels produced by the AI model are predictions. They should be interpreted as decision-support information and not as definitive clinical diagnosis without specialist confirmation.

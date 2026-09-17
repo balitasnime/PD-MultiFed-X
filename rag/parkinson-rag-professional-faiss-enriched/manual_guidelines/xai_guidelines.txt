@@ -1,0 +1,14 @@
+EXPLAINABLE AI GUIDELINES FOR PARKINSON REPORTS
+
+SHAP:
+SHAP values estimate the contribution of each input feature to a model prediction. A high SHAP value means that the feature strongly influenced the model output. SHAP can be used for global explanations across a cohort and local explanations for one patient.
+
+Integrated Gradients:
+Integrated Gradients estimate feature attribution by accumulating gradients from a baseline input to the actual input. For MRI pipelines, Integrated Gradients can be used only when the imaging model and prediction model are connected in a differentiable pipeline.
+
+Important interpretation rules:
+1. Feature importance is not causality.
+2. A high SHAP value does not prove that the feature biologically caused the disease state.
+3. MRI latent features such as mri_feat_230 are learned representations, not automatically anatomical regions.
+4. Explanations describe model behavior and should be interpreted with clinical expertise.
+5. Patient-level explanations should be presented carefully and should not overstate certainty.

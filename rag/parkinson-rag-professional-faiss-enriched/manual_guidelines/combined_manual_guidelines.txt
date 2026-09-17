@@ -1,0 +1,89 @@
+===== report_generation_rules.txt =====
+
+RAG REPORT GENERATION RULES
+
+1. Never change model predictions.
+2. Never change model probabilities.
+3. Preserve patient-specific numerical values exactly.
+4. Use retrieved knowledge only as medical background.
+5. Distinguish AI prediction from clinical diagnosis.
+6. Do not prescribe medication or provide treatment decisions.
+7. Do not invent missing patient information.
+8. If the knowledge base does not contain enough information, state that the information is not available in the local knowledge base.
+9. Use objective scientific language.
+10. Mention uncertainty when appropriate.
+11. SHAP values indicate model feature importance, not biological causality.
+12. MRI latent features are learned representations and do not directly correspond to anatomical brain regions.
+13. The generated report should support clinical interpretation but must not replace expert neurological evaluation.
+
+
+===== td_pigd_definitions.txt =====
+
+TD AND PIGD MOTOR SUBTYPE DEFINITIONS
+
+Tremor Dominant (TD):
+TD means Tremor Dominant. It refers to a Parkinson motor phenotype in which tremor symptoms are more prominent than gait or postural instability symptoms. TD is often associated with relatively slower motor progression compared with PIGD, although individual patient trajectories may vary.
+
+Postural Instability and Gait Difficulty (PIGD):
+PIGD means Postural Instability and Gait Difficulty. It refers to a Parkinson motor phenotype characterized by gait impairment, balance problems, postural instability, freezing of gait, and increased fall risk. PIGD is frequently associated with greater disability, faster clinical progression, and possible cognitive involvement.
+
+Interpretation rule:
+TD/PIGD labels produced by the AI model are predictions. They should be interpreted as decision-support information and not as definitive clinical diagnosis without specialist confirmation.
+
+
+===== xai_guidelines.txt =====
+
+EXPLAINABLE AI GUIDELINES FOR PARKINSON REPORTS
+
+SHAP:
+SHAP values estimate the contribution of each input feature to a model prediction. A high SHAP value means that the feature strongly influenced the model output. SHAP can be used for global explanations across a cohort and local explanations for one patient.
+
+Integrated Gradients:
+Integrated Gradients estimate feature attribution by accumulating gradients from a baseline input to the actual input. For MRI pipelines, Integrated Gradients can be used only when the imaging model and prediction model are connected in a differentiable pipeline.
+
+Important interpretation rules:
+1. Feature importance is not causality.
+2. A high SHAP value does not prove that the feature biologically caused the disease state.
+3. MRI latent features such as mri_feat_230 are learned representations, not automatically anatomical regions.
+4. Explanations describe model behavior and should be interpreted with clinical expertise.
+5. Patient-level explanations should be presented carefully and should not overstate certainty.
+
+
+===== clinical_scores_definitions.txt =====
+
+CLINICAL SCORES USED IN PARKINSON DISEASE RESEARCH
+
+UPDRS / MDS-UPDRS:
+The Unified Parkinson's Disease Rating Scale and the Movement Disorder Society revision are used to assess motor and non-motor aspects of Parkinson's disease. They include sections related to non-motor experiences, daily living activities, motor examination, and motor complications.
+
+GDS:
+The Geriatric Depression Scale is used to assess depressive symptoms. In Parkinson-related prediction models, GDS-related variables can be important for depression detection and severity classification.
+
+MoCA:
+The Montreal Cognitive Assessment evaluates cognitive domains such as memory, attention, executive function, language, abstraction, and visuospatial ability. Lower cognitive performance may be relevant for progression analysis.
+
+ESS:
+The Epworth Sleepiness Scale assesses daytime sleepiness and may reflect sleep-related non-motor burden.
+
+RBDSQ:
+The REM Sleep Behavior Disorder Screening Questionnaire evaluates symptoms related to REM sleep behavior disorder, which is clinically relevant in Parkinson disease research.
+
+STAI:
+The State-Trait Anxiety Inventory evaluates anxiety symptoms. Anxiety is a common non-motor symptom in Parkinson disease.
+
+Interpretation rule:
+Clinical scales should be interpreted according to validated scoring procedures. In AI reports, they should be described as variables contributing to model prediction, not as standalone diagnostic conclusions.
+
+
+===== mri_features_explanation.txt =====
+
+MRI FEATURES EXPLANATION
+
+MRI-derived features in this project are latent biomarkers extracted by a deep learning imaging encoder, such as a 3D Vision Transformer. These features summarize patterns in MRI data that may help the multimodal model predict Parkinson subtype, depression status, or depression severity.
+
+Important rules:
+1. Latent MRI features are numerical representations learned by the model.
+2. A feature name such as mri_feat_199 or mri_feat_230 does not directly identify a brain region.
+3. MRI SHAP values indicate how much the model used that latent feature.
+4. MRI feature importance should be interpreted as model behavior, not as confirmed neuroanatomical evidence.
+5. Image-level attribution methods such as Integrated Gradients or Grad-CAM are needed to discuss spatial MRI regions.

@@ -1,0 +1,15 @@
+RAG REPORT GENERATION RULES
+
+1. Never change model predictions.
+2. Never change model probabilities.
+3. Preserve patient-specific numerical values exactly.
+4. Use retrieved knowledge only as medical background.
+5. Distinguish AI prediction from clinical diagnosis.
+6. Do not prescribe medication or provide treatment decisions.
+7. Do not invent missing patient information.
+8. If the knowledge base does not contain enough information, state that the information is not available in the local knowledge base.
+9. Use objective scientific language.
+10. Mention uncertainty when appropriate.
+11. SHAP values indicate model feature importance, not biological causality.
+12. MRI latent features are learned representations and do not directly correspond to anatomical brain regions.
+13. The generated report should support clinical interpretation but must not replace expert neurological evaluation.
