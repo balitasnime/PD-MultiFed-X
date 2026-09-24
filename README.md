@@ -282,7 +282,7 @@ vit3d_test_metrics.csv
 
 The three representation-learning models operate **in parallel**:
 
-![Hybrid ViT3D + Parallel Transformer/BiGRU Multimodal Architecture](docs/architecture_diagram.png)
+![Hybrid ViT3D + Parallel Transformer/BiGRU Multimodal Architecture](docs/FedMVT-BiGRU.png)
 
 ```text
                  LONGITUDINAL CLINICAL DATA
@@ -361,7 +361,7 @@ This formulation allows the model to learn shared representations from complemen
 
 `notebooks/06_federated_learning.ipynb` evaluates the multimodal multitask model in a federated setting, implemented as a custom local-training / aggregation loop.
 
-![Federated Learning Architecture (APM-FL)](docs/federated_architecture.png)
+![Federated Learning Architecture (APM-FL)](docs/PD-MultiFed-X-VLM.png)
 
 ```text
 Local client training
@@ -398,7 +398,7 @@ These metric files (CSV/JSON) are generated locally when you run the notebook; t
 
 `notebooks/07_explainability.ipynb` operates on the trained global/federated model.
 
-![Explainability (XAI) Architecture](docs/xai_architecture.png)
+![Explainability (XAI) Architecture](docs/xq.png)
 
 ### Clinical explanations
 
@@ -435,7 +435,7 @@ ALL_PATIENTS_ATTENTION_GRAD_ROLLOUT_summary*.json
 
 `notebooks/08_vlm_report_generation.ipynb` uses **Qwen2.5-VL-3B-Instruct** to generate structured patient reports from the outputs of the predictive and explainability stages. Requires an `HF_TOKEN` set as an environment variable (see [Installation](#installation)).
 
-![VLM + RAG Clinical Report Generation Architecture](docs/vlm_rag_architecture.png)
+![VLM + RAG Clinical Report Generation Architecture](docs/vlm_qwen25_3b.png)
 
 ### Main inputs
 
