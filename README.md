@@ -1,4 +1,4 @@
-# PD-MultiFed-X
+# PD-MultiFed-X-VLM
 
 ### A Privacy-Preserving Multimodal Federated Learning Framework for Parkinson's Disease and Depression
 
@@ -9,7 +9,7 @@ PD-MultiFed-X is a multimodal longitudinal framework for the joint analysis of *
 ## Repository Structure
 
 ```text
-PD-MultiFed-X/
+PD-MultiFed-X-VLM/
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
