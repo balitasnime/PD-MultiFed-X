@@ -1,6 +1,6 @@
 # PD-MultiFed-X-VLM
 
-### A Privacy-Preserving Multimodal Federated Learning Framework for Parkinson's Disease and Depression
+### An Explainable Federated Multimodal Framework for Parkinson's Disease and Depression Assessment with VLM-Based Clinical Reporting
 
 PD-MultiFed-X is a multimodal longitudinal framework for the joint analysis of **Parkinson's disease motor subtypes, depression, and depression severity**. It integrates longitudinal clinical assessments, 3D MRI representations, parallel temporal and spatial encoders, multitask learning, federated learning, explainable AI, and structured clinical report generation.
 
